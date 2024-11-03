@@ -1,0 +1,154 @@
+{
+    "customer_support_faq": [
+        {
+            "question": "How do I track my order?",
+            "answer": "You can track your order by going to the 'My Orders' section on the app or website. Click on the order you want to track to see the current status.",
+            "keywords": [
+                "track order",
+                "order status",
+                "where is my order",
+                "shipment tracking"
+            ]
+        },
+        {
+            "question": "How can I return a product?",
+            "answer": "To return a product, go to the 'My Orders' section, select the product, and click on 'Return'. Follow the instructions to initiate the return.",
+            "keywords": [
+                "return product",
+                "how to return",
+                "refund",
+                "product return"
+            ]
+        },
+        {
+            "question": "What is the return policy?",
+            "answer": "You can return most items within 30 days of delivery. Some items have specific return policies, which you can find in the product details.",
+            "keywords": [
+                "return policy",
+                "return period",
+                "refund policy",
+                "product return rules"
+            ]
+        },
+        {
+            "question": "How do I cancel an order?",
+            "answer": "You can cancel your order before it is shipped. Go to 'My Orders', select the order, and click on 'Cancel'.",
+            "keywords": [
+                "cancel order",
+                "order cancellation",
+                "how to cancel",
+                "cancel purchase"
+            ]
+        },
+        {
+            "question": "How do I contact customer support?",
+            "answer": "You can contact customer support by visiting the 'Help Center' on our website or app, or by calling our customer care number.",
+            "keywords": [
+                "contact support",
+                "customer service",
+                "help center",
+                "support number"
+            ]
+        },
+        {
+            "question": "What payment methods are accepted?",
+            "answer": "We accept various payment methods, including credit/debit cards, net banking, UPI, and Cash on Delivery (COD).",
+            "keywords": [
+                "payment methods",
+                "accepted payments",
+                "how to pay",
+                "payment options"
+            ]
+        },
+        {
+            "question": "How do I update my address?",
+            "answer": "To update your address, go to the 'Account Settings' and click on 'Manage Addresses'. You can edit or add new addresses from there.",
+            "keywords": [
+                "update address",
+                "change address",
+                "edit address",
+                "manage addresses"
+            ]
+        },
+        {
+            "question": "What should I do if I receive a damaged product?",
+            "answer": "If you receive a damaged product, initiate a return through 'My Orders' and select 'Damaged Product' as the reason. You can also contact customer support for assistance.",
+            "keywords": [
+                "damaged product",
+                "product issue",
+                "return damaged item",
+                "damaged goods"
+            ]
+        },
+        {
+            "question": "How can I apply a coupon code?",
+            "answer": "You can apply a coupon code at checkout. Enter the code in the 'Apply Coupon' field and click 'Apply' to avail the discount.",
+            "keywords": [
+                "apply coupon",
+                "discount code",
+                "promo code",
+                "how to use coupon"
+            ]
+        },
+        {
+            "question": "How do I check my refund status?",
+            "answer": "To check your refund status, go to 'My Orders' and click on the order that you returned. The refund status will be shown there.",
+            "keywords": [
+                "refund status",
+                "check refund",
+                "where is my refund",
+                "refund tracking"
+            ]
+        },
+        {
+            "question": "What is the estimated delivery time?",
+            "answer": "The estimated delivery time varies based on your location and the product. You can check the expected delivery date on the product page and in 'My Orders'.",
+            "keywords": [
+                "delivery time",
+                "expected delivery",
+                "when will my order arrive",
+                "delivery estimate"
+            ]
+        },
+        {
+            "question": "Can I change my delivery address after placing an order?",
+            "answer": "You can change your delivery address before the order is shipped by going to 'My Orders' and selecting 'Change Address'.",
+            "keywords": [
+                "change delivery address",
+                "update address after order",
+                "modify shipping address",
+                "delivery address change"
+            ]
+        },
+        {
+            "question": "How do I know if my payment was successful?",
+            "answer": "After making a payment, you will receive a confirmation message and an email. You can also check your order status in 'My Orders'.",
+            "keywords": [
+                "payment success",
+                "payment confirmation",
+                "successful transaction",
+                "order confirmation"
+            ]
+        },
+        {
+            "question": "How do I subscribe to notifications and offers?",
+            "answer": "To subscribe to notifications and offers, go to 'Account Settings' and enable notifications under 'Preferences'.",
+            "keywords": [
+                "subscribe to offers",
+                "enable notifications",
+                "get offers",
+                "notifications subscription"
+            ]
+        },
+        {
+            "question": "What are the delivery charges?",
+            "answer": "Delivery charges may vary depending on your location and order value. You can check the delivery charges during checkout.",
+            "keywords": [
+                "delivery charges",
+                "shipping cost",
+                "delivery fees",
+                "charges for delivery"
+            ]
+        }
+    ]
+}

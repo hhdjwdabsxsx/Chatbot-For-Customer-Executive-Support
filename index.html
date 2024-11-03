@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.L.E.A.N </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        /* Chatbot Icon */
+        .chatbot-icon {
+            width: 60px;
+            height: 60px;
+            
+            
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+           
+        }
+
+        .chatbot-icon img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        /* Chat Container */
+        .chat-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 400px;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 1000;
+            transform-origin: bottom right; /* Start from the icon position */
+            transform: scale(0); /* Initially collapsed */
+            opacity: 0;
+            transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth scaling */
+        }
+
+        .chat-container.show {
+            transform: scale(1); /* Expand both x and y */
+            opacity: 1;
+            transform-origin: bottom right; /* Keep the origin the same */
+        }
+
+        .chat-container.hide {
+            transform: scale(0); /* Collapse back to the origin */
+            opacity: 0;
+            transform-origin: bottom right; /* Keep the origin the same */
+        }
+
+        .chat-container h1 {
+            text-align: center;
+        }
+
+        .chat-container input[type="text"], .chat-container button {
+            width: 90%;
+            padding: 10px;
+            margin: 5px auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .chat-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        .chat-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .response-box {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f8f8;
+           /* border: 1px solid #ddd;*/
+            border-radius: 5px;
+            height: 250px;
+            overflow-y: auto;
+        }
+        .chatbot-response {
+            background-color: #c3d5e8; /* Blue background */
+            color: black; 
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Chatbot Icon -->
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.duqsZZu3Wlq-B4skbmEQSgHaHn&pid=Api&P=0&h=180" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot Interface Container -->
+    <div class="chat-container" id="chatbotContainer">
+        <h1>C.L.E.A.N</h1>
+        <div class="response-box" id="responseBox"></div>
+        <input type="text" id="userInput" placeholder="Type your message here..." value="">
+        
+    </div>
+
+    <script>
+
+        function toggleChatbot() {
+            var chatbotContainer = document.getElementById("chatbotContainer");
+            if (chatbotContainer.classList.contains("show")) {
+                chatbotContainer.classList.remove("show");
+                chatbotContainer.classList.add("hide");
+            } else {
+                chatbotContainer.classList.remove("hide");
+                chatbotContainer.classList.add("show");
+            }
+        }
+
+        function sendMessage() {
+            var userMessage = document.getElementById("userInput").value;
+        
+            // Display the user's message in the response box before sending the request
+            var responseBox = document.getElementById("responseBox");
+            responseBox.innerHTML += "<p><strong>You:</strong> " + userMessage + "</p>";
+        
+            // Clear the input field after displaying the message
+            document.getElementById("userInput").value = "";
+        
+            // Send the user's message to the backend
+            fetch("http://127.0.0.1:8080/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the chatbot's response in the response box
+                responseBox.innerHTML += "<p class='chatbot-response'><strong>C.L.E.A.N:</strong> " + data.response + "</p>";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+
+        var input = document.getElementById("userInput");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    sendMessage();
+    input.value="";
+    // Trigger the button element with a click
+    document.getElementById("myBtn").click();
+  }
+});
+    </script>
+</body>
+</html>
